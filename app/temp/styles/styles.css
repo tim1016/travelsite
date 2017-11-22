@@ -2,15 +2,13 @@
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 
 html {
   font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /**
@@ -117,8 +115,7 @@ a:hover {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -244,8 +241,7 @@ figure {
  */
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box; /* 1 */
+  box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -260,7 +256,6 @@ hr {
 
 button,
 input,
-optgroup,
 select,
 textarea {
   font: inherit; /* 1 */
@@ -349,8 +344,7 @@ fieldset {
  */
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
+  box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -373,8 +367,7 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
+  box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -425,95 +418,97 @@ textarea {
   font: inherit; /* 2 */
 }
 
-body{
-	font-family: 'Roboto', sans-serif;
-	color: #333;
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
-img{
-	max-width: 100%;
-	height: auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.large-hero{
-	position:relative;
-	
-	
+.large-hero {
+  position: relative;
+
 }
 
-.large-hero__text-content{
-		position:absolute;
-		top:50%;
-		-webkit-transform: translateY(-50%);
-		        transform: translateY(-50%);
-		left:0;
-		width: 100%;
-		text-align: center;	
-    }
-
-.large-hero__title{
-		color: #2f5572;
-		font-weight: 300;
-		margin: 0;
-		font-size: 1.1rem;
-
-	}
-
-@media(min-width: 530px){
-
-.large-hero__title{
-			font-size: 2.0rem
-
-	}
-	}
-
-@media(min-width: 800px){
-
-.large-hero__title{
-			font-size: 3.2rem
-
-	}
-	}
-
-@media(min-width: 1200px){
-
-.large-hero__title{
-			font-size: 4.8rem
-
-	}
-	}
-
-.large-hero__subtitle{
-		color: #2f5572;
-		font-weight:  300;
-		font-size: 1.1rem;
-		margin: 0;
-		
-
-	}
-
-.large-hero__description{
-		color: #FFF;
-		font-size: 1.875rem;
-		font-weight: 100;
-		text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
-		max-width: 30rem;
-		margin:auto;
-	}
-
-.btn{
-	background-color: #2f5572;
-	color: #fff;
-	text-decoration: none;
-	display: inline-block;
-	padding: 0.75rem 1.2rem;
+.large-hero__text-content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.btn--orange{
-		background-color: #d59541;
-	}
+.large-hero__title {
+  font-weight: 300;
+  color: #2f5572;
+  margin: 0;
+  font-size: 1.1rem;
+}
 
-.btn--large{
-		font-size: 1.25rem;
-		padding: 1.1rem 1.9rem; 
-	}
+@media (min-width: 530px) {
+
+  .large-hero__title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .large-hero__title {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .large-hero__title {
+    font-size: 4.8rem;
+  }
+}
+
+.large-hero__subtitle {
+  font-weight: 300;
+  color: #2f5572;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+@media (min-width: 530px) {
+
+  .large-hero__subtitle {
+    font-size: 2.9rem;
+  }
+}
+
+.large-hero__description {
+  color: #FFF;
+  font-size: 1.875rem;
+  font-weight: 100;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  background-color: #2f5572;
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+
+}
+
+.btn--orange {
+  background-color: #d59541;
+}
+
+.btn--large {
+  font-size: 1.25rem;
+  padding: 1.1rem 1.9rem;
+}
