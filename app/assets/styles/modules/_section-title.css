@@ -25,6 +25,10 @@
 			margin-left: 0;		
 		}
 		
+		&--blue{
+			color: $mainBlue;
+		}
+	
 		
 	}
 }
