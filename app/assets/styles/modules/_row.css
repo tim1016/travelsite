@@ -33,6 +33,7 @@
   &__b-margin-until-medium {
     margin-bottom: 1rem;
   }
+   
 
   @mixin atMedium {
 
@@ -100,6 +101,7 @@
   &--equal-height-at-medium {
     @mixin atMedium {
       display: flex;
+       
 
     & > div {
       float: none;
@@ -107,7 +109,7 @@
     }
 
   }
-
+   }
   &--equal-height-at-large {
     @mixin atLarge {
       display: flex;
@@ -118,5 +120,7 @@
     }
 
   }
-
 }
+   
+}
+     
