@@ -3,13 +3,21 @@
    padding: 10px 0px;
    width: 100%;
    z-index: 2;
+   transition: background-color 0.3s ease-out;
    
    @mixin atMedium{
       background-color: rgba($mainBlue,0.3);
    }
    
+   &--is-expanded{
+      background-color: rgba($mainBlue, 0.55);
+   }
+   
    &__btn-container{
-      float: right;
+      
+      @mixin atMedium{
+         float: right;
+      }
    }
    
    &__logo{
@@ -35,22 +43,74 @@
    
    &__menu-icon{
       width: 20px;
-      height: 20px;
-      background-color: #FFF;
+      height: 19px;
       position: absolute;
       top: 10px;
       right:10px; 
+      z-index: 10;
+      
+      &::before{
+         content: "";
+         position: absolute;
+         top: 0;
+         left:0;
+         width: 20px;
+         height: 3px;
+         background-color: #FFF;
+      }
+      
+      &__middle{
+         position: absolute;
+         top: 8px;
+         left:0;
+         width: 20px;
+         height: 3px;
+         background-color: #FFF;
+      }
+      
+      &::after{
+         content: "";
+         position: absolute;
+         bottom: 0;
+         left:0;
+         width: 20px;
+         height: 3px;
+         background-color: #FFF;
+      }      
+      
+      
       
       @mixin atMedium{
          display: none;
       }
    }
    
+   &__menu-icon--close-x{
+      &::before{
+         transform: rotate(45deg);
+      }
+   }
+   
    &__menu-content{
-      display: none;
+      opacity: 0;
+      transform: scale(1.2);
+      transition: all 0.3s ease-out;
+      z-index: -10;
+      position: relative;
+      padding-top: 90px;
+      text-align: center;
       
       @mixin atMedium{
-         display: block;
+         transform: scale(1.0);
+         opacity: 1;
+         z-index: 1;
+         padding-top: 0px;
+      }
+      
+      &--is-visible{
+         transform: scale(1.0);
+         opacity: 1;
+         z-index: 1;
       }
    }
    
